@@ -1,4 +1,12 @@
-# challenge
+# Weather App Challenge
+
+### Installation
+- `npm install`
+- `npm run start:dev`
+- To build for production, run `npm run build`
+
+### Demo
+- View demo <a href="https://reactcurrencyconverter.firebaseapp.com/">here</a>
 
 ### the task
 implement a very basic weather service called "myWeather"

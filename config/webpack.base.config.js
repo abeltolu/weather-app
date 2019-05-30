@@ -41,7 +41,7 @@ module.exports = env => {
                     'process.env.NODE_ENV': JSON.stringify(env.NODE_ENV)
                 }),
                 new CopyWebpackPlugin([ 
-                    { from: 'assets', to: 'dist/assets' },
+                    { from: 'assets', to: 'assets' },
                 ]),
                 new CompressionPlugin({
                     filename: "[path].gz[query]",
