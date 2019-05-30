@@ -7,16 +7,8 @@ import {
 } from '../../App/common';
 
 export default class CityInput extends React.Component {
-
-    constructor(){
-        super();
-    }
-
-    componentDidMount(){
-    }
-
     render() {
-        const { city, handleCityChange } = this.props;
+        const { handleCityChange } = this.props;
     
         return (
             <Fragment>

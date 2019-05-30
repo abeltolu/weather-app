@@ -16,7 +16,7 @@ import {
 
 //set openWeather Base URL
 const API_BASE_URL = "https://api.openweathermap.org/data/2.5/forecast";
-const OPENWEATHER_APP_ID = "fbf712a5a83d7305c3cda4ca8fe7ef29";
+const OPENWEATHER_APP_ID = "747b05fbc36503c91d678e12d2492b9f";
 
 //get component state
 const getWeatherState = (state) => state.weather;
