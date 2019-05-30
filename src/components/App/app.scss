@@ -1,0 +1,295 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 14px;
+    background: rgb(29, 117, 248);
+    font-family: 'Mukta', sans-serif;
+    overflow: scroll;
+
+    @media (max-width: 768px){
+        padding: 20px;
+    }
+}
+
+.root__app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 768px){
+        height: 100vh;
+    }
+}
+
+/** BEGIN Weather Error Container CSS **/
+.error__container {
+    width: 100%;
+    padding: 0px;
+    font-size: 14px;
+}
+
+.error__msg {
+    background: #dc1717;
+    color: #fff;
+    min-height: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+/** END Weather Error Container CSS **/
+
+/** BEGIN Weather App CSS **/
+.weather__app__main {
+    width: 400px;
+    max-width: 400px;
+    padding: 20px;
+    background: rgb(10, 90, 210);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    margin: 40px auto 40px auto;
+    animation: ease-in 5s infinite;
+
+    @media (max-width: 768px){
+        width: 100%;
+    }
+}
+
+.weather__app__container {
+    margin: 0 auto;
+    width: 100%;
+  
+    @media only screen and (max-width: 64em) {
+      width: 100%;
+    }
+  
+    @media only screen and (max-width: 48em) {
+      width: 100%;
+    }
+  
+    header {
+      text-align: center;
+  
+      .heading {
+        font-size: 22px;
+        padding: 25px 0 0 0;
+        text-transform: uppercase;
+      }
+    }
+  
+    .weather__dashboard {
+        text-align: center;
+    
+        .error {
+            display: none;
+        }
+    
+        section.controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+    
+            input {
+                font-size: 13px;
+                padding: 10px;
+                display: inline-block;
+                background: #283593;
+                border: none;
+                color: #fff;
+                width: 230px;
+                text-transform: uppercase;
+        
+                &::placeholder {
+                    color: #fff;
+                }
+        
+                &:focus {
+                    &::placeholder {
+                    color: transparent;
+                    }
+                }
+        
+                &.search {
+                    width: 30px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+  
+    .forecast-tiles {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    
+        .forecast-tile {
+            min-height: 10px;
+            background: transparent;
+            margin: 3px;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+    
+            .icon {
+                width: auto;
+                height: auto;
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+
+                & img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+            .min-max {
+                padding: 10px 10px;
+                font-size: 20px;
+                color: #c7cef5;
+    
+                strong {
+                    font-weight: bold;
+                    color: #fff;
+                }
+            }
+    
+            .weather-info {
+                padding: 0 0 0 15px;
+                display: flex;
+                align-items: center;
+    
+                .more-info {
+                    padding: 0 10px;
+                    font-size: 12px;
+                }
+            }
+    
+            .primary-info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 20px;
+                font-size: 14px;
+
+                & .date {
+                    text-transform: capitalize;
+                }
+            }
+
+            :hover {
+                background: #256fde;
+            }
+        }
+    }
+
+    .detailed-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+
+        .city-info {
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .temp {
+                display: flex;
+                justify-content: center;
+
+                span.min, span.max, span.sub {
+                    font-size: 12px;
+                }
+
+                span.sub{
+                    top: 0px;
+                    left: 80px;
+                    width: 100px;
+                    display: flex;
+                    font-weight: 400;
+                    position: absolute;
+                }
+
+                span.minmax{
+                    margin-left: 20px;
+                }
+
+                span.main {
+                    font-size: 80px;
+                    font-weight: 700;
+                    position: relative;
+                    margin: 0;
+                    line-height: 1;
+                }
+            }
+
+            .city-name {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+        
+        .icon {
+            img {
+                width: 50px;
+            }
+        }
+
+        .hourly {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            min-height: 50px;
+            margin-bottom: 20px;
+            -webkit-transition: height 0.20s ease-in;
+            -moz-transition: height 0.20s ease-in;
+            -o-transition: height 0.20s ease-in;
+            transition: height 0.20s ease-in;
+            background: #256fde;
+            padding: 10px 0;
+
+            .hourly-info {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                align-items: center;
+                justify-content: center;
+                overflow-x: scroll;
+
+                .hour-temperature {
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+
+                .hour-of-the-day {
+                    font-weight: normal;
+                    font-size: 12px;
+                    color: #c5cae9;
+                }
+
+                .hour-cloud-picture {
+                    line-height: 0;
+                    img {
+                        height: 30px;
+                    }
+                }
+
+                div {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+/** END Weather App CSS **/

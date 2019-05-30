@@ -1,0 +1,29 @@
+@font-face{ 
+	font-family: "WeatherTimeRegular";
+    src: url('/assets/Font/weathertime-webfont.woff2') format('woff2'),
+         url('/assets/Font/weathertime-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.weathericons {
+    font-size: 14px;
+    font-style: normal;
+    font-family: "WeatherTimeRegular", sans-serif;
+}
+
+.wi-sunny:before {
+    content: "A";
+}
+
+.wi-moon:before {
+    content: "B";
+}
+
+.wi-day-cloudy:before {
+    content: "C";
+}
+
+.wi-cloudy:before {
+    content: "D";
+}
