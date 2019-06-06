@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "reactcurrencyconverter"
+  },
+  "targets": {
+    "reactcurrencyconverter": {
+      "hosting": {
+        "weatherappdhh": [
+          "weatherappdhh"
+        ]
+      }
+    }
   }
 }

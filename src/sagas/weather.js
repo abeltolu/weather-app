@@ -43,7 +43,7 @@ function* fetchWeatherData(){
     } catch (error) {
 
         //put is Saga's middleware function for dispatching actions to the redux store
-        yield put(fetchError( (error && error.response.data) ? error.response.data : {} ));
+        yield put(fetchError( (error && error.response && error.response.data) ? error.response.data : {} ));
         
     }
 

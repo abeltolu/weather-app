@@ -4,8 +4,6 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
-import { routerMiddleware } from 'connected-react-router';
-import { createBrowserHistory } from 'history';
 
 //import Reducers
 import reducer from './reducers';
@@ -18,14 +16,10 @@ import App from './components/App/appContainer';
 //create your sagas for yielding API calls before sending to reducers
 const sagas = createSagaMiddleware();
 
-//create your browser history
-const history = createBrowserHistory();
-
 //create redux store to save state-data
 const store = createStore(
-    reducer(history),
+    reducer(),
     applyMiddleware(
-        routerMiddleware(history),
         createLogger(), 
         sagas
     )

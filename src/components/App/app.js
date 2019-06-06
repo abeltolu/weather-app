@@ -4,8 +4,7 @@ import Loader from 'react-loader-spinner'
 import { Header } from './common';
 import CityInput from '../Weather/CityInput/cityInputContainer';
 import WeatherForecast from '../Weather/Forecast';
-import './app.scss';
-import './weathericons.scss';
+
 export default class App extends React.Component {
     render() {
         const { status, forecast, isLoading } = this.props;
@@ -23,7 +22,7 @@ export default class App extends React.Component {
                     <CityInput />
 
                     {
-                        //Check if data is loading
+                        //Check if data is loading. Show animated loading icon
                         (isLoading) ?
                         (
                             <Loader type="Ball-Triangle" color="#FFFFFF" height="50" width="50" />

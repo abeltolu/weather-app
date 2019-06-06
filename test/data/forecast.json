@@ -1,6 +1,6 @@
 {
   "weather": {
-    "data": {
+    "forecast": {
         "cod": "200",
         "message": 0.0077,
         "cnt": 40,

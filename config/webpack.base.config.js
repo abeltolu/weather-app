@@ -6,12 +6,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CompressionPlugin = require('compression-webpack-plugin');
 const APP_DIR = path.resolve(__dirname, '../src');
+const APP_CSS_DIR = path.resolve(__dirname, '../src/components/App/app.scss');
+const WEATHER_ICONS_CSS_DIR = path.resolve(__dirname, '../src/styles/weathericons.scss');
 
 module.exports = env => {
     const { NODE_ENV } = env;
     return merge([
         {
-            entry: ['@babel/polyfill', APP_DIR],
+            entry: ['@babel/polyfill', APP_DIR, APP_CSS_DIR, WEATHER_ICONS_CSS_DIR],
             module: {
                 rules: [
                     {

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CityInput /> should render snapshot 1`] = `
+<Fragment>
+  <styled.div>
+    <styled.input
+      name="city"
+      placeholder="Enter your City"
+    />
+    <styled.button
+      onClick={[Function]}
+    >
+      Search
+    </styled.button>
+  </styled.div>
+</Fragment>
+`;

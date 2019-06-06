@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import CityInput from './cityInput';
 
 //import the actions that need to be dispatched here

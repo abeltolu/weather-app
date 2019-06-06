@@ -6,7 +6,7 @@
 - To build for production, run `npm run build`
 
 ### Demo
-- View demo <a href="https://reactcurrencyconverter.firebaseapp.com/">here</a>
+- <a href="https://weatherappdhh.firebaseapp.com/">https://weatherappdhh.firebaseapp.com/</a>
 
 ### the task
 implement a very basic weather service called "myWeather"

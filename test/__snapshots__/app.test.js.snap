@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should render snapshot 1`] = `
+<Fragment>
+  <div
+    className="weather__app__main"
+  >
+    <styled.header
+      className="main__header"
+    >
+      <i
+        className="weathericons wi-day-cloudy"
+      />
+       Weather App
+    </styled.header>
+    <Connect(CityInput) />
+  </div>
+</Fragment>
+`;

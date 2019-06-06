@@ -5,9 +5,6 @@ import {
     FETCH_ERROR
 } from '../actions/weather';
 
-//we need this to reset state to initial state when the page is changed
-import { LOCATION_CHANGE  } from 'react-router-redux'; 
-
 //define the initial state of the action before any actions are dispatched
 const initialState = {
     forecast: null,
@@ -47,9 +44,6 @@ export default (state, action) => {
                 forecast: action.error,
                 status: "failed",
             }
-
-        case LOCATION_CHANGE:
-            return initialState;
 
         default:
             return state;
