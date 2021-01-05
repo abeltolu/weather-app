@@ -23,7 +23,7 @@
     "@babel/polyfill": "^7.0.0-beta.51",
     "@babel/preset-env": "^7.0.0-beta.51",
     "@babel/preset-react": "^7.0.0-beta.51",
-    "axios": "^0.17.1",
+    "axios": "^0.21.1",
     "babel-cli": "^6.26.0",
     "babel-jest": "^22.4.4",
     "babel-loader": "^8.0.0-beta.0",
